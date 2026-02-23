@@ -1,15 +1,213 @@
 <!doctype html>
 <html>
 <head>
+	<!--Figma design fonts: Freeman, Noto Sans-->
+	<title>GraftKings</title>
 
-	<!--
-	About this page:
+	<style>
 
-	-->
-	<title>Unbranding</title>
+	body {
+		background-color: #000000;
+		font-family: Arial Narrow, Arial, sans-serif;
+		color: #FFFFFF;
+		text-align:center;
+	}
+
+	p {
+		font-family: Arial, sans-serif;
+		font-sze: 18px;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	img {
+		width: 100px;
+		height: 100px;
+		padding-bottom: 8px;
+	}
+
+	.container {
+		display: grid;
+		padding: 10px;
+		grid-template-columns: auto auto auto;
+	}
+
+/* I learned how to make a container from W3 schools "CSS Grid Container" tutorial at the following URL: https://www.w3schools.com/css/css_grid_container.asp */
+
+	.backdrop {
+		width: 360px;
+		height: 516px;
+		padding-top: 24px;
+		border-radius: 16px;
+		background-color: #1B1B1B;
+		margin-left: 4px;
+		margin-right: 4px;
+		border: 2px solid transparent;
+	}
+
+	.middrop {
+		width: 310px;
+		height: 245px;
+		padding-top: 65px;
+		background-color: #282C31;
+		border-radius: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.appicon {
+		width: 180px;
+		height: 160px;
+		border-radius: 40px;
+		background-color: #61B60E;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: bolder;
+		font-size: 24px;
+		padding-top: 20px;
+	}
+
+	.button {
+		width: 130px;
+		height: 42px;
+		font-size: 24px;
+		border-radius: 4px;
+		padding: 10px;
+		padding-bottom: 0px;
+		background-color: #61B60E;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: bolder;
+	}
+
+	.button:hover {
+		cursor: pointer;
+		background-color: #346109;
+	}
+
+	.backdrop:hover {
+		border: 2px solid white;
+	}
+
+	</style>
 	
 </head>
 <body>
-	<h1>Hello, world!</h1>
+
+	<h1>You deserve it all, so DraftKings has it all</h1>
+
+	<div class="container">
+		
+		<div class="backdrop">
+			<div class="middrop">
+				<div class="appicon">
+					<img src="../assets/draftKingsLogo_White.png">
+					<br>SPORTSBOOK
+				</div>
+			</div>
+
+			<h2>Sportsbook</h2>
+
+			<p id="sportsbook">Get in on the action and bet on all your<br>favorite sports</p>
+
+			<div class="button">
+				Bet Now
+			</div>
+		</div>
+
+		<div class="backdrop">
+			<div class="middrop">
+				<div class="appicon" style="background-color: #000000">
+					<img src="../assets/draftKingsLogo.png">
+					<br>FANTASY
+				</div>
+			</div>
+
+			<h2>Fantasy</h2>
+
+			<p id="fantasy">Play your favorite fantasy sports for<br>huge cash prizes</p>
+
+			<div class="button">
+				Play Now
+			</div>
+		</div>
+
+		<div class="backdrop">
+			<div class="middrop">
+				<div class="appicon" style="background: linear-gradient(135deg, rgba(199, 37, 49, 0) 16%, #C72531 87%), #FBC00F">
+					<img src="../assets/draftKingsLogo_White.png">
+					<br>PICK6
+
+<!-- I recreated this gradient by right-clicking elements in my Figma mock-up and following this path:
+
+(1) "Copy/Paste as..."
+(2) "Copy as Code"
+(3) "CSS"
+					-->
+
+				</div>
+			</div>
+
+			<h2>Pick6</h2>
+
+			<p id="pick6">Pick more or less of player stats in our<br>fantasy game</p>
+
+			<div class="button">
+				Play Now
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		
+// I attempted to make this with querySelectorAll to target all .button elements, but I couldn't get it to work, even after changing "this" to every class and ID in my code. For future reference, how could I structure that to function properly?
+
+		// var paragraph = document.getElementById("sportsbook");
+		// sportsbook.onmouseover="innerHTML='Get in on the scam and bet on all your favorite sports!'"
+		// sportsbook.onmouseout="innerHTML='Get in on the action and bet on all your favorite sports!'"
+
+// The code below (from https://www.w3schools.com/jsref/event_onmouseover.asp) works for the intended text, but I can't get it to translate to innerText or innerHTML changes. I've been at this for too many hours, so I give up.
+
+		// document.getElementById("sportsbook").onmouseover=function() {mouseOver()};
+
+		// document.getElementById("sportsbook").onmouseout=function() {mouseOut()};
+
+		// function mouseOver() {
+		// 	document.getElementById("sportsbook").innerHTML="red"
+		// }
+
+		// function mouseOut() {
+		// 	document.getElementById("sportsbook").style.color="white";
+		// }
+
+	let targetElement = document.querySelector(".button");
+
+	targetElement.addEventListener("mouseover", function(){
+		console.log(this.innertext);
+		this.innerText = "Lose Now"
+	})
+
+	targetElement.addEventListener("mouseout", function(){this.innerText = "Bet Now"})
+
+	</script>
+
 </body>
 </html>
+
+<!--
+
+Get in on the action and bet on all your favorite sports / Get in on the scam and bet on all your favorite sports
+
+Play your favorite fantasy sports for huge cash prizes / Play your favorite fantasy sports for huge cash losses
+
+Pick more or less of player stats in our fantasy game / Lose money and dignity betting on player stats in our fantasy game
+
+-->
