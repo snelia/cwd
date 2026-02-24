@@ -4,6 +4,16 @@
 	<!--Figma design fonts: Freeman, Noto Sans-->
 	<title>GraftKings</title>
 
+<!--
+
+I wanted to make a site that emphasized the mental and financial harm that gambling websites do to people. Because I couldn't manage to get the text change working, I opted to have the unbranding text as the base for the site.
+
+The text that I wanted to have change on hover is in a comment at the bottom of this file, as well as in my mock-up. I also wanted to create a simple graphic for the .appicon elements, but I was way too ambitious with my project, so I didn't have enough time to finish it.
+
+Given we only covered Javascript for 15 minutes total during class time, I feel like I did fairly well.
+
+-->
+
 	<style>
 
 	body {
@@ -101,7 +111,7 @@
 </head>
 <body>
 
-	<h1>You deserve it all, so DraftKings has it all</h1>
+	<h1>You deserve it all, so DraftKings will steal it all</h1>
 
 	<div class="container">
 		
@@ -109,13 +119,13 @@
 			<div class="middrop">
 				<div class="appicon">
 					<img src="../assets/draftKingsLogo_White.png">
-					<br>SPORTSBOOK
+					<br>SPORTSTOOK
 				</div>
 			</div>
 
-			<h2>Sportsbook</h2>
+			<h2>Sportstook</h2>
 
-			<p id="sportsbook">Get in on the action and bet on all your<br>favorite sports</p>
+			<p>Get in on the scam and bet on all your<br>favorite sports</p>
 
 			<div class="button">
 				Bet Now
@@ -126,13 +136,13 @@
 			<div class="middrop">
 				<div class="appicon" style="background-color: #000000">
 					<img src="../assets/draftKingsLogo.png">
-					<br>FANTASY
+					<br>FANTASEIZE
 				</div>
 			</div>
 
-			<h2>Fantasy</h2>
+			<h2>Fantaseize</h2>
 
-			<p id="fantasy">Play your favorite fantasy sports for<br>huge cash prizes</p>
+			<p>Play your favorite fantasy sports for<br>huge cash losses</p>
 
 			<div class="button">
 				Play Now
@@ -143,9 +153,9 @@
 			<div class="middrop">
 				<div class="appicon" style="background: linear-gradient(135deg, rgba(199, 37, 49, 0) 16%, #C72531 87%), #FBC00F">
 					<img src="../assets/draftKingsLogo_White.png">
-					<br>PICK6
+					<br>NICK6
 
-<!-- I recreated this gradient by right-clicking elements in my Figma mock-up and following this path:
+<!-- I recreated this gradient from Figma by right-clicking elements in my mock-up and following this path:
 
 (1) "Copy/Paste as..."
 (2) "Copy as Code"
@@ -155,9 +165,9 @@
 				</div>
 			</div>
 
-			<h2>Pick6</h2>
+			<h2>Nick6</h2>
 
-			<p id="pick6">Pick more or less of player stats in our<br>fantasy game</p>
+			<p>Lose money and dignity betting on player<br>stats in our fantasy game</p>
 
 			<div class="button">
 				Play Now
@@ -168,13 +178,18 @@
 
 	<script type="text/javascript">
 		
-// I attempted to make this with querySelectorAll to target all .button elements, but I couldn't get it to work, even after changing "this" to every class and ID in my code. For future reference, how could I structure that to function properly?
+// I attempted to make the hover effect change the description text with querySelectorAll, but I realized that addEventListener can only target the first element. For future reference, how exactly should I structure it to function properly?
 
-		// var paragraph = document.getElementById("sportsbook");
-		// sportsbook.onmouseover="innerHTML='Get in on the scam and bet on all your favorite sports!'"
-		// sportsbook.onmouseout="innerHTML='Get in on the action and bet on all your favorite sports!'"
+	let targetElement = document.querySelector(".button");
 
-// The code below (from https://www.w3schools.com/jsref/event_onmouseover.asp) works for the intended text, but I can't get it to translate to innerText or innerHTML changes. I've been at this for too many hours, so I give up.
+	targetElement.addEventListener("mouseover", function(){
+		console.log(this.innertext);
+		this.innerText = "Lose Now"
+	})
+
+	targetElement.addEventListener("mouseout", function(){this.innerText = "Bet Now"})
+
+	// This was my test code that works fine, but I can't translate it into text changes no matter what I try.
 
 		// document.getElementById("sportsbook").onmouseover=function() {mouseOver()};
 
@@ -187,15 +202,6 @@
 		// function mouseOut() {
 		// 	document.getElementById("sportsbook").style.color="white";
 		// }
-
-	let targetElement = document.querySelector(".button");
-
-	targetElement.addEventListener("mouseover", function(){
-		console.log(this.innertext);
-		this.innerText = "Lose Now"
-	})
-
-	targetElement.addEventListener("mouseout", function(){this.innerText = "Bet Now"})
 
 	</script>
 
