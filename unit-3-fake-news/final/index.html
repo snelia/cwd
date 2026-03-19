@@ -34,10 +34,11 @@
 	}
 
 	.row, .col {
-		border: 1px solid black;
+		/*border: 1px solid black;*/
 		text-align: left;
-		/*BORDER IS TEMPORARY TO HELP WITH VISUALIZATION*/
 	}
+
+/*BORDER IS TEMPORARY TO HELP WITH VISUALIZATION*/
 
 	.title {
 		font-family: Times New Roman, serif;
@@ -49,23 +50,24 @@
 		font-size: 0.75rem;
 	}
 
-/*	img {
-		height: 25rem;
-	}*/
+	/* Why does "author" have a huge space below it (or is it title with a huge space above it)? I tried making [line-height: 1.0] for both, but it didn't solve the issue. I'm perplexed. */
 
 </style>
 
 </head>
 <body>
 
-<!--	<button type="button">Primary</button>
-	<button type="button" class="btn btn-primary">Primary</button> -->
+<!--	Button shenanigans from class:
+
+<button type="button">Primary</button>
+<button type="button" class="btn btn-primary">Primary</button>
+
+	-->
 	
 	<h1 align="center">The Daily Chirp logo eventually</h1>
 <!-- Numbers in a grid system are the number of columns. By itself, "col" defaults to "auto" proportions. -->
 	<div class="container text-center">
-				<!-- Take out "container" to remove the margins on either side of the grid.
-				"col col-lg-6 col-md-12 first" -->
+
 	  	<div class="row">
 		  	
 		  	<div class="col">
@@ -78,7 +80,7 @@
 
 		<div class="row">
 			    
-		    <div class="col">
+		    <div class="col"> <!-- Leftmost column with headlines -->
 
 		    	<h4 class="title">As gusts hit 25 miles per hour, flight patterns are blown off course</h4>
 		    	<p>New faces and opportunities emerge for the Fredericksbird community amid blustery pressure gradients.</p>
@@ -86,13 +88,11 @@
 
 		    </div>
 
-		    <div class="col col-6"> <!-- Middle column with images -->
+		    <div class="col col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
 		    	
 		    	<img src="../assets/flock.jpg" alt="A flock of birds flying." class="img-fluid">
 
 		    	<p class="author">Photo taken by Jahanzeb Ahsan.</p>
-
-		    	<!-- Caption that the photo was taken by Jahanzeb Ahsan -->
 
 		    </div>
 
@@ -125,7 +125,7 @@
 
 	  	<div class="row">
 	  	
-	  		<div class="col">
+	  		<div class="col"> <!-- Leftmost column with headlines -->
 		      	
 	  			<h4 class="title">Happy Hours at feeders change with Daylight Savings Time</h4>
 	      		<p>Seed refills will happen an hour earlier in accordance with human time adjustments. See the new hours here.</p>
@@ -133,14 +133,14 @@
 
 		    </div>
 		
-		    <div class="col col-6">
+		    <div class="col col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
 			    	
 		    	<img src="../assets/birdfeeder.jpg" alt="Two finches at a birdfeeder" class="img-fluid">
 		    	<p class="author">Photo taken by Joshua J. Cotten.</p>
 
 			</div>
 
-	    	<div class="col">
+	    	<div class="col"> <!-- Rightmost column with opinion articles -->
 	      		
 	      		<div class="row">
 	      		
