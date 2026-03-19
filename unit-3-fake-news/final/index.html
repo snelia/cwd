@@ -16,19 +16,33 @@
 	
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  	<link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia" rel="stylesheet">
+
 <style>
 
 	:root {
-		--cool-steel: #7b9ea8ff;
-		--sunflower-gold: #f3b61fff;
-		--old-gold: #a29f15ff;
-		--black-cherry: #510d0aff;
-		--pitch-black: #191102ff;
+		--pitch-black: #0b0a07ff;
+		--celadon: #bbcea8ff;
+		--light-gold: #e3d87eff;
+		--burnt-peach: #c97d60ff;
+		--dusty-olive: #748067ff;
 	}
 
 	body {
 		font-family: Verdana, Arial, sans-serif;
 		text-align: left;
+		color: var(--pitch-black);
+		background: linear-gradient(180deg, var(--celadon) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+	}
+
+	hr {
+		color: var(--burnt-peach);
+	}
+
+	h1 {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		font-family: "UnifrakturMaguntia", serif;
 	}
 
 	.row, .col {
@@ -53,6 +67,7 @@
 </style>
 
 </head>
+
 <body>
 
 <!--	Button shenanigans from class:
@@ -62,7 +77,7 @@
 
 	-->
 	
-	<h1 align="center">The Daily Chirp logo eventually</h1>
+	<h1 align="center">The Daily Chirp</h1>
 <!-- Numbers in a grid system are the number of columns. By itself, "col" defaults to "auto" proportions. -->
 	<div class="container text-center">
 
@@ -70,7 +85,7 @@
 		  	
 		  	<div class="col">
 		  	
-		  		tabs and/or buttons eventuallyv too tired
+		  		
 		  	
 		  	</div>
 		
@@ -78,7 +93,7 @@
 
 		<div class="row">
 			    
-		    <div class="col"> <!-- Leftmost column with headlines -->
+		    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"> <!-- Leftmost column with headlines -->
 
 		    	<h4 class="title">As gusts hit 25 miles per hour, flight patterns are blown off course</h4>
 		    	<p>New faces and opportunities emerge for the Fredericksbird community amid blustery pressure gradients.</p>
@@ -86,7 +101,7 @@
 
 		    </div>
 
-		    <div class="col col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
+		    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
 		    	
 		    	<img src="../assets/flock.jpg" alt="A flock of birds flying." class="img-fluid">
 
@@ -94,12 +109,13 @@
 
 		    </div>
 
-	    	<div class="col"> <!-- Rightmost column with opinion articles -->
+	    	<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"> <!-- Rightmost column with opinion articles -->
 
 	      		<div class="row">
 	      		
 	      			<p class="author">Robin Banks</p>
 	      			<h5 class="title">Singer Jay “Blue” Corvidae on being the only “normal” bird in an emo family</h5>
+	      			<hr>
 	      		
 	      		</div>
 
@@ -107,6 +123,7 @@
 	      		
 	      			<p class="author">Caroline Wren and Downy Wood</p>
 	      			<h5 class="title">Birdfeeder etiquette is a relic of the past. Here’s how to get suet in a hurry.</h5>
+	      			<hr>
 	      		
 	      		</div>
 
@@ -114,6 +131,7 @@
 	
 	      			<p class="author">Haus Finch</p>
 	      			<h5 class="title">Ten ways to keep in touch with your migratory friends without leaving town</h5>
+	      			<hr>
 
 		      	</div>
 
@@ -123,7 +141,7 @@
 
 	  	<div class="row">
 	  	
-	  		<div class="col"> <!-- Leftmost column with headlines -->
+	  		<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"> <!-- Leftmost column with headlines -->
 		      	
 	  			<h4 class="title">Happy Hours at feeders change with Daylight Savings Time</h4>
 	      		<p>Seed refills will happen an hour earlier in accordance with human time adjustments. See the new hours here.</p>
@@ -131,19 +149,20 @@
 
 		    </div>
 		
-		    <div class="col col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
+		    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 first"> <!-- Middle column with images -->
 			    	
 		    	<img src="../assets/birdfeeder.jpg" alt="Two finches at a birdfeeder" class="img-fluid">
 		    	<p class="author">Photo taken by Joshua J. Cotten.</p>
 
 			</div>
 
-	    	<div class="col"> <!-- Rightmost column with opinion articles -->
+	    	<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12"> <!-- Rightmost column with opinion articles -->
 	      		
 	      		<div class="row">
 	      		
 	      			<p class="author">Tarsiger Cyanurus</p>
 	      			<h5 class="title">The delicate art of avoiding birders during the Great Backyard Bird Count</h5>
+	      			<hr>
 	      		
 	      		</div>
 
@@ -151,6 +170,7 @@
 	      		
 	      			<p class="author">Author names here</p>
 	      			<h5 class="title">TEST ARTICLE. Here is a pithy little title that tells you things.</h5>
+	      			<hr>
 	      		
 	      		</div>
 
@@ -158,6 +178,7 @@
 	
 	      			<p class="author">Author names here</p>
 	      			<h5 class="title">TEST ARTICLE. Here is a pithy little title that tells you things.</h5>
+	      			<hr>
 
 		      	</div>
 
