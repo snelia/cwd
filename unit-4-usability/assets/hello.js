@@ -1,6 +1,7 @@
 let myForm = document.querySelector("#myForm");
 
-myForm.addEventListener("submit",(event)=>{event.preventDefault();
+myForm.addEventListener("submit",(event)=>{
+	event.preventDefault();
 
 let q1 = Number(this.q1.value);
 let q2 = Number(this.q2.value);
