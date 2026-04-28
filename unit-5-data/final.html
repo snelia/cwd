@@ -12,6 +12,14 @@
 
 <style>
 
+	:root {
+		--graph-navy: #132856;
+		--graph-violet: #8835ab;
+		--hover-violet: #7a2f9a;
+		--graph-pink: #ff7db7;
+		--graph-yellow: #fae06d;
+	}
+
 	h1, h2, h3, h4 {
 		font-family: Times New Roman, serif;
 	}
@@ -21,7 +29,19 @@
 	}
 
 	hr {
-		color: #8835ab;
+		color: var(--graph-violet);
+	}
+
+	.btn {
+		--bs-btn-color: #FFFFFF;
+		--bs-btn-bg: var(--graph-violet);
+		--bs-btn-border-color: var(--graph-pink);
+		--bs-btn-hover-color: #FFFFFF;
+		--bs-btn-hover-bg: var(--hover-violet);
+	}
+
+	.btn:active {
+		background-color: var(--graph-pink);
 	}
 
 	.rotund {
@@ -48,7 +68,7 @@
 	  		<div class="col-12">
 
 	  			<h1>“Every Mother a Missionary”?: The Vlogs of Mormon Mothers</h1>
-	  			<h2><a href="https://scholar.umw.edu/student_research/648/" role="link">Spring 2025 Religious Studies Capstone Paper</a></h2>
+	  			<a class="btn btn-primary" href="https://scholar.umw.edu/student_research/648/" role="button">Spring 2025 Religious Studies Capstone Paper</a></h2>
 
 	  			<hr> <!-- fill with something -->
 
@@ -158,7 +178,15 @@
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+		
+		let targetElement = document.querySelector(".btn");
+		
+		targetElement.addEventListener("click", function() { changeBackground(#ff7db7) });
+		this.innerText = "Lose Now"
+	})
+
+	</script>
 
 </body>
 </html>
